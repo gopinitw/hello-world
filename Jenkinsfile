@@ -11,5 +11,11 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage('jacoco report coverage'){
+            steps{
+                jacoco()
+                }
+               }
+
        }
 }
